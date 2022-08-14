@@ -13,21 +13,25 @@ Hint > It should be stored in the database or mobile app developer will share it
 
 Run the application <br>
 
-using System; <br>
-using System.Collections.Generic; <br>
+````
+```
+using System; 
+using System.Collections.Generic; 
 
 namespace SendPushNotification 
 {
-    class Program <br>
+    class Program 
     {
-        static void Main(string[] args) <br>
+        static void Main(string[] args) 
         {
-            List<string> tokenList = new List<string>(); <br>
-            tokenList.Add("Device token"); // Android Device Token <br>
-            tokenList.Add("Device Token"); // IOS Device Token <br>
-            var dynamic = new PushNotifier(PushNotifier.Keys.FIREBASE_PUSHNOTIFICATION_KEY).SendNotification(tokenList, "Title:) ", "notification message", "general"); <br>
-            Console.WriteLine(dynamic); <br>
+            List<string> tokenList = new List<string>();
+            tokenList.Add("Device token"); // Android Device Token 
+            tokenList.Add("Device Token"); // IOS Device Token
+            var dynamic = new PushNotifier(PushNotifier.Keys.FIREBASE_PUSHNOTIFICATION_KEY).SendNotification(tokenList, "Title:) ", "notification message", "general"); 
+            Console.WriteLine(dynamic); 
 
         } 
     } 
 } 
+```
+````
